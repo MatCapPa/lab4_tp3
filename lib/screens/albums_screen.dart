@@ -24,7 +24,8 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
   Future<List<Album>>? futureAlbums;
 
   Future<List<Album>> fetchAlbums(String artistId) async {
-    final uri = Uri.parse('http://localhost:3000/api/artistas/$artistId/albums');
+    //final uri = Uri.parse('http://localhost:3000/api/artistas/$artistId/albums');  //url para Chrome
+    final uri = Uri.parse('http://10.0.2.2:3000/api/artistas/$artistId/albums');     //url para Android
 
     try {
       final response = await http.get(uri);
@@ -49,7 +50,8 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
   }
 
   Future<void> searchArtist(String artistName) async {
-    final uri = Uri.parse('http://localhost:3000/api/artistas/search?q=$artistName');
+    //final uri = Uri.parse('http://localhost:3000/api/artistas/search?q=$artistName');  //url para Chrome
+    final uri = Uri.parse('http://10.0.2.2:3000/api/artistas/search?q=$artistName');     //url para Android
 
     try {
       final response = await http.get(uri);

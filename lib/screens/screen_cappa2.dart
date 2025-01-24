@@ -21,7 +21,7 @@ class AlbumSingleScreen extends StatelessWidget {
             Container(
               width: double.infinity,
               height: size.height * 0.62,
-              color: const Color(0xff2d3e4f),
+              color: const Color.fromARGB(255, 255, 255, 255),
               child: Image.network(args['imagen']),
             ),
             const SizedBox(
